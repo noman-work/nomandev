@@ -1,6 +1,9 @@
 tasks:
   - init: npm install
-    command: npm run dev
+    command: |
+      export HMR_HOST=`gp url 300` 
+      echo "Startting Dev Server 😉 ...."
+      npm run dev
 
 ports:
   - port: 3000
